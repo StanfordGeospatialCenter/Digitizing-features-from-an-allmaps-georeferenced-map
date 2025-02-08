@@ -42,9 +42,9 @@ The map used for this digitization task is accessible as an **XYZ tile layer** v
 
 3. Under "Specify name and type" Add **Lines and Points** as the geometry type and name the layers `Ports` and `Railroads`
 
-![alt text](<images/screenshot 2025-02-08 at 12.48.14 PM.png>)
+![alt text](<images/screenshot 2025-02-08 at 1.09.46 PM.png>)
 
-1. Click **Next**, and name the dataset **french_ports_railroads_[your initials or SUNetID]** 
+4. Click **Next**, and name the dataset **french_ports_railroads_[your initials or SUNetID]** 
 
 ![alt text](<images/screenshot 2025-02-08 at 12.50.27 PM.png>)
 
@@ -52,35 +52,46 @@ The map used for this digitization task is accessible as an **XYZ tile layer** v
 
 ---
 
-
-
 ## **Step 3: Customize the Data Schema**
 
 At this point, you should be redirected to the **Details Page** for the **french_ports_railrods_SUNetID** Layer.
 
-![alt text](<images/screenshot 2025-02-08 at 1.02.10 PM.png>)
+### **Adding Fields (Columns)**
+![alt text](<images/screenshot 2025-02-08 at 3.23.21 PM.png>)
+1. Click on **Data** at the top of the **Details Page**.
+2. CONfirm that `Layer:Ports` is selected in the **Layer** Dropdown, And click on **Fields** 
+ to change to the **Fields** view.
+ 
+ ![alt text](<images/screenshot 2025-02-08 at 3.25.56 PM.png>)
+3. Click on the **+Add** Button and use the following image to fill the **Add Field** dialog.
 
-### **Fields**
-Define the following fields for the dataset:
+![alt text](<images/screenshot 2025-02-08 at 3.27.51 PM.png>)
+
+4. Repeat the previous step to add and define the following fields for the dataset (*note that you will change to the Railroads Layer and add it's new fields*):
 
 | Field Name       | Data Type | Length | Description                              |
 |------------------|-----------|--------|------------------------------------------|
 | `port_label`     | Text      | 50     | Name or identifier for the port.         |
 | `port_type`      | Text      | 50     | Classification of the port (major/minor).|
 | `railroad_label` | Text      | 50     | Name or identifier for the railroad.     |
-| `notes`          | Text      | 255    | Additional observations or comments.     |
+| `notes`          | Text      | 255    | Additional observations or comments (both layers).     |
 
 ---
 
-## **Step 4: Create Controlled Vocabulary Lists**
+## **Step 4: Create a Controlled Vocabulary List for a Field (domain)**
+
 To standardize the input for `port_type`, create a domain for controlled vocabulary:
 
-1. Go to the **Data** tab in the feature layer settings.
-2. Under **Domains**, create the following:
+1. From the **Data>Fields** page in the feature layer Details for the `Ports Layer`, click on the `port-type` Field value to open it's details page.
+2. Click on **Create List**, create the following values:
    - **Port Type**: Add the values:
      - **Major**
      - **Minor**
-3. Assign this domain to the `port_type` field.
+
+![alt text](<images/screenshot 2025-02-08 at 3.41.58 PM.png>)
+3. Click Save to assign this list (domain) to the `port_type` field.
+
+![alt text](<images/screenshot 2025-02-08 at 3.43.31 PM.png>)
 
 ---
 
