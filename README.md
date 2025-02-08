@@ -11,27 +11,55 @@ The map used for this digitization task is accessible as an **XYZ tile layer** v
   
 - **Viewer Link**:  
   [Stanford Digital Repository Viewer](https://purl.stanford.edu/zc368qw3281)
+![alt text](./images/image.png)
 
+- **Allmaps.org Link**
+- https://editor.allmaps.org/#/collection?url=https%3A%2F%2Fpurl.stanford.edu%2Fzc368qw3281%2Fiiif%2Fmanifest&image=d95dc4e2f0f60fb8
+
+![alt text](./images/screenshot%202025-02-08%20at%2012.30.18 PM.png)
 ---
 
 ## **Step 1: Login to ArcGIS Online**
-1. Open a web browser and navigate to [ArcGIS Online](https://www.arcgis.com).
+1. Open a web browser and navigate to [Stanford's ArcGIS Online Org](https://stanford.maps.arcgis.com):  https://stanford.maps.arcgis.com  
+   ![alt text](<images/screenshot 2025-02-08 at 12.36.23 PM.png>)
 2. Click **Sign In**.
-3. Enter your credentials or use a public ArcGIS Online account.
+
+![alt text](<images/screenshot 2025-02-08 at 12.38.27 PM.png>)
+
+3. Click the blue **Stanford University** button
+
+3. You should be bounced to Stanford's SIngle SIgn-On (SSO). Use your Stanford SUNetID and Password to login
 
 ---
 
 ## **Step 2: Create a New Feature Dataset**
-1. Click **Content** in the menu.
-2. Select **New Item** → **Feature Layer** → **Create Blank Layer**.
-3. Choose **Lines and Points** as the geometry type.
-4. Click **Next**, and name the dataset **french_ports_railroads**.
-5. Set the coordinate system to **WGS 1984 Web Mercator (Auxiliary Sphere)**.
-6. Click **Finish**.
+1. Click **Content** in the top menu.
+2. Select **New Item** → **Feature Layer** → **Define Your Own Layer**.
+
+![alt text](<images/screenshot 2025-02-08 at 12.42.32 PM.png>)
+
+![alt text](<images/screenshot 2025-02-08 at 12.45.54 PM.png>)
+
+3. Under "Specify name and type" Add **Lines and Points** as the geometry type and name the layers `Ports` and `Railroads`
+
+![alt text](<images/screenshot 2025-02-08 at 12.48.14 PM.png>)
+
+1. Click **Next**, and name the dataset **french_ports_railroads_[your initials or SUNetID]** 
+
+![alt text](<images/screenshot 2025-02-08 at 12.50.27 PM.png>)
+
+2. Click **Save**.
 
 ---
 
+
+
 ## **Step 3: Customize the Data Schema**
+
+At this point, you should be redirected to the **Details Page** for the **french_ports_railrods_SUNetID** Layer.
+
+![alt text](<images/screenshot 2025-02-08 at 1.02.10 PM.png>)
+
 ### **Fields**
 Define the following fields for the dataset:
 
