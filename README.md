@@ -143,25 +143,47 @@ Here, we will create a group that allows anyone with membership to edit the item
 ![alt text](<images/screenshot 2025-02-09 at 8.03.18 PM.png>)  
 
 
+## **Step 7: Add the Feature Layer for Digitization**  
 
-## **Step 7: Add the Feature Layer for Digitization**
-1. Click **Add** → **Search for Layers**.
-2. Select **My Content** and find **french_ports_railroads**.
-3. Click **Add to Map**.
+
+1. Click **Add** → **Browse Layers**.
+
+2. Select **My Content** and find **french_ports_railroad_[SUNetID]s**.  
+
+![alt text](<images/screenshot 2025-02-09 at 8.06.01 PM.png>)
+
+3. Click **+Add**.
+4. Click the ![ ](<images/screenshot 2025-02-09 at 8.11.02 PM.png>)Arrow at the top of the panel to close it 
 
 ---
 
 ## **Step 8: Configure Symbology**
-1. Click on the **french_ports_railroads** layer.
-2. Select **Change Style**.
-3. Configure symbology for:
-   - **Ports**: Use unique symbols based on `port_type` (e.g., red circle for major ports, orange circle for minor ports).
+1. Click on the small arrow next to the  **french_ports_railroads** layer to expand it.
+2. Select the **Ports** layer
+3. Select **Edit layer style** in the resulting Properties Panel, on the right.
+4. Click on **+Field** and check the box next to `Port Type`
+
+![alt text](<images/screenshot 2025-02-09 at 8.16.20 PM.png>)
+
+5. Click **Add**
+6. In the **Pick a style** dialog, click on **Style options** for the **Types (unique symbols)**
+
+![alt text](<images/screenshot 2025-02-09 at 8.17.49 PM.png>)
+
+7. Configure symbology for:
+   - **Ports**: Use unique symbols based on `port_type` (e.g., 10pt red circle for major ports, 6pt orange circle for minor ports).
+
+![alt text](<images/screenshot 2025-02-09 at 8.20.52 PM.png>)![alt text](<images/screenshot 2025-02-09 at 8.21.52 PM.png>)
+
+8. Click **Done** and **Done** to save the changes and dismiss the Properties Panel.
+
+8. Return to the Layers Panel on the left and configure the symbology for the `Railroads` feature layer
    - **Railroads**: Use a dashed line for railroads.
-4. Save your configuration.
+9. Save your configuration.
 
 ---
 
-## **Step 9: Configure Popups**
+## **Step 9: Configure Popups**  
 1. Click on the **french_ports_railroads** layer.
 2. Select **Configure Pop-ups**.
 3. Display the following fields:
