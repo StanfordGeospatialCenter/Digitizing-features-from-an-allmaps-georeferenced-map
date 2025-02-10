@@ -96,21 +96,53 @@ To standardize the input for `port_type`, create a domain for controlled vocabul
 ---
 
 ## **Step 5: Create an Editing Group**
-1. In the **Groups** section, click **Create Group**.
-2. Name the group **"French Ports and Railroads Editors"**.
-3. Set group visibility to **Organization** or **Public**.
-4. Enable **Allow group members to update all items**.
-5. Add participants to the group.
+Here, we will create a group that allows anyone with membership to edit the items that are shared with the group. In this case, we will share our Feature Layers to the group, so that we can share the work of digitizing features from our map. 
 
+1. Click on the **Groups** link at the top of the page, then click **Create Group**.  
+
+| Setting | Description |
+|---------|-------------|
+| Name | **"OSS Map Editors [SUNetID]"**. |
+| Group visibility | **All organization members** |
+| How can people join this group? | **By Request** |
+| Who can contribute | **All group members** |
+| Enable | **Allow group members to update all items**. |
+| Who can see full members list | **Anyone who can view the group** |  
+
+1. Check the **Shared Update** option, to allow editing by group members
+2. Click **Save**
+
+![alt text](<images/screenshot 2025-02-09 at 2.19.23 PM.png>)
 ---
 
 ## **Step 6: Create a Map**
 1. Click **Map** in the ArcGIS Online menu.
-2. Click **Add** → **Add Layer from Web**.
-3. Select **Tile Layer** and paste the **XYZ tile URL** generated from the IIIF manifest.
-4. Click **Add Layer**.
+2. Click **Add** → **Add Layer from URL**.
+
+![alt text](<images/screenshot 2025-02-09 at 2.20.54 PM.png>)
+
+3. Paste the **XYZ tile URL** generated from the IIIF manifest (This can be found on the [**Results** page of the Allmaps Editor](https://editor.allmaps.org/#/results?url=https%3A%2F%2Fpurl.stanford.edu%2Fzc368qw3281%2Fiiif%2Fmanifest&image=d95dc4e2f0f60fb8) for the map we are working with).
+
+![alt text](<images/screenshot 2025-02-09 at 2.22.22 PM.png>)
+
+4. Confirm `Type: Tile Layer` is automatically detected after the paste. 
+
+![alt text](<images/screenshot 2025-02-09 at 7.56.09 PM.png>)
+
+5. Click **Next**
+6. Give your layer a **Title** and **Attribution**
+
+![alt text](<images/screenshot 2025-02-09 at 7.58.32 PM.png>)
+
+6. Click **Add to map**.
+7. Save your map as `France Roads and Ports Digitization (SUNetID)`  
+![alt text](<images/screenshot 2025-02-09 at 8.00.20 PM.png>)  
+![alt text](<images/screenshot 2025-02-09 at 8.02.01 PM.png>)  
 
 ---
+![alt text](<images/screenshot 2025-02-09 at 8.03.18 PM.png>)  
+
+
 
 ## **Step 7: Add the Feature Layer for Digitization**
 1. Click **Add** → **Search for Layers**.
