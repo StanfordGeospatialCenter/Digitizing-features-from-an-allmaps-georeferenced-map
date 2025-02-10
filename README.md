@@ -273,12 +273,13 @@ Here, we will create a group that allows anyone with membership to edit the item
 6. Continue digitizing the Ports until you hve completed the task ( or just practice for a bit)
 7. Click the **Back arrow** to return to the Editor Tools main panel
 
-![alt text](<images/screenshot 2025-02-09 at 9.12.56 PM.png>)
+![alt text](<images/screenshot 2025-02-09 at 9.12.56 PM.png>)  
 
+![alt text](<images/screenshot 2025-02-10 at 9.14.26 AM.png>)
 ---
 
 ## **Step 13: Export Digitized Data to GeoJSON**
-1. Go to **Content** and find the **french_ports_railroads** layer.
+1. Open another instance of https://stanford.maps.arcgis.com in a new browser tab and navigate to **Content** and find the **french_ports_railroads** layer.
 2. Click **Export** → **GeoJSON**.
 3. Download the exported file for use in other GIS applications.
 
