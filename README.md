@@ -280,7 +280,23 @@ Here, we will create a group that allows anyone with membership to edit the item
 
 ## **Step 13: Export Digitized Data to GeoJSON**
 1. Open another instance of https://stanford.maps.arcgis.com in a new browser tab and navigate to **Content** and find the **french_ports_railroads** layer.
-2. Click **Export** → **GeoJSON**.
+2. Find your **french_ports_railroads_SUNETID** Feature Layer (hosted), and click on it to navigate to the Details Page for the data. 
+
+![alt text](<images/screenshot 2025-02-10 at 9.40.25 AM.png>)
+
+![alt text](<images/screenshot 2025-02-10 at 9.42.28 AM.png>)
+
+2. Click **Export Data** → **GeoJSON**.
+
+![alt text](<images/screenshot 2025-02-10 at 9.42.28 AM.png>)
+
+3. Fill out the **Export to GeoJSON** dialog and click **Export**
+
+![alt text](<images/screenshot 2025-02-10 at 9.44.09 AM.png>)
+
+4. On the resulting Details page, click on the Share button, make your data `Public` and click **Save**
+![alt text](<images/screenshot 2025-02-10 at 9.47.13 AM.png>)
+
 3. Download the exported file for use in other GIS applications.
 
 ---
