@@ -179,33 +179,105 @@ Here, we will create a group that allows anyone with membership to edit the item
 
 8. Return to the Layers Panel on the left and configure the symbology for the `Railroads` feature layer
    - **Railroads**: Use a dashed line for railroads.
-9. Save your configuration.
+9. Save your configuration.![alt text](<images/screenshot 2025-02-09 at 8.26.27 PM.png>)
 
 ---
 
 ## **Step 9: Configure Popups**  
-1. Click on the **french_ports_railroads** layer.
-2. Select **Configure Pop-ups**.
-3. Display the following fields:
+
+
+1. Click on the **Port** feature layer to open the Properties, again.
+2. Click on the **Pop-ups** button.
+3. Expand the **Fields list** and confirm the following fields:
    - `port_label`
    - `port_type`
-   - `railroad_label`
    - `notes`
-4. Save the changes.
+4. **Drag and Drop** the Fields to rearrange them, if needed. 
+
+![alt text](<images/screenshot 2025-02-09 at 8.34.04 PM.png>)
+
+5. Click on the **Railroads** feature layer and confirm the following fields:
+   - `railroad_label`
+   - `Notes`
+6. Click on the **X** to remove the `Shape_Length` field from the pop-up
+7. **Save** the changes to your Map.
 
 ---
 
 ## **Step 10: Share the Map Using an Editing App**
-1. Click **Share** → **Create Web App**.
-2. Select the **Editor App Template**.
-3. Configure the app:
-   - Enable **Editing** for adding and modifying features.
+
+
+1. Click **Create app** → **Instant Apps**.
+
+![alt text](<images/screenshot 2025-02-09 at 8.41.45 PM.png>)
+
+2. Click on **Choose** on the **Sidebar App Template**.  
+
+![alt text](<images/screenshot 2025-02-09 at 8.43.10 PM.png>)  
+
+1. Fill out the **Create app - Sidebar** dialog and click **Create app**
+
+![alt text](<images/screenshot 2025-02-09 at 8.43.53 PM.png>)
+
+4. Configure the app:
+   - Click on the **Search settings** Button and use `edit` as the search term
+   - Click on **Edit tools** and click **Continue** to exit Express Mode and continue configuring your app
+   - Toggle on **Edit tools** for adding and modifying features.
+   - Expand the **french_ports_railroads_SUNetID** Layer and check the boxes for `Railroads` and `Ports`
    - Configure the attribute editor to use dropdown menus for `port_type`.
-4. Save and publish the app.
+
+
+![alt text](<images/screenshot 2025-02-09 at 8.59.05 PM.png>)
+
+1. Click **Publish** and **Confirm** to save and publish the app.
+
+![alt text](<images/screenshot 2025-02-09 at 8.57.36 PM.png>)
 
 ---
 
-## **Step 11: Export Digitized Data to GeoJSON**
+## **Step 11: Share the app**
+1. After publishing the app, the Share dialog will be presented. Click on **Change share settings**
+2. In the resulting **Share** dialog, click on the **Edit group sharing** button
+![alt text](<images/screenshot 2025-02-09 at 9.01.51 PM.png>)
+
+
+3. Search for your **OSS Editing Group** in the resulting **Group sharing** and check it's box
+
+![alt text](<images/screenshot 2025-02-09 at 9.02.37 PM.png>)
+
+4. Click **Apply**  
+5. Click **Save**
+6. Click **Review sharing** to share the Map and Feature Layers with the OSS Editing Group, as well.
+
+![alt text](<images/screenshot 2025-02-09 at 9.04.55 PM.png>)
+
+7. Click **Update sharing** to update teh sharing settings to match your app.
+
+![alt text](<images/screenshot 2025-02-09 at 9.06.52 PM.png>)
+
+8. Click **Publish** again to save your changes
+9. Click the **Launch** button  
+
+
+![alt text](<images/screenshot 2025-02-09 at 9.08.47 PM.png>)
+
+---
+
+## **Step 12: DIgitize your features**
+
+1. Click on the **Edit** button to open the **Editor Tool Panel**
+2. Select the Ports template icon, and place it on one of the ports in your map
+3. Add the Port Label
+4. Use the Port Type drop-down to select the `port-type`
+5. Click Create to save the feature
+6. Continue digitizing the Ports until you hve completed the task ( or just practice for a bit)
+7. Click the **Back arrow** to return to the Editor Tools main panel
+
+![alt text](<images/screenshot 2025-02-09 at 9.12.56 PM.png>)
+
+---
+
+## **Step 13: Export Digitized Data to GeoJSON**
 1. Go to **Content** and find the **french_ports_railroads** layer.
 2. Click **Export** → **GeoJSON**.
 3. Download the exported file for use in other GIS applications.
