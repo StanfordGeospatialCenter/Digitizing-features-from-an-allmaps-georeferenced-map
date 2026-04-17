@@ -359,14 +359,14 @@ Once you've mastered georeferencing a single map, consider:
 
 ## Appendix: Key Links & Resources
 
-- **David Rumsey Map Collection**: https://www.davidrumsey.com/
-- **MapRank Search (David Rumsey)**: https://rumsey.mapranksearch.com/
-- **Allmaps**: https://allmaps.org/
-- **Allmaps Editor**: https://editor.allmaps.org/
-- **IIIF Documentation**: https://iiif.io/
+- [David Rumsey Map Collection](https://www.davidrumsey.com/)
+- [MapRank Search (David Rumsey)](https://rumsey.mapranksearch.com/)
+- [Allmaps](https://allmaps.org/)
+- [Allmaps Editor](https://editor.allmaps.org/)
+- [IIIF Documentation](https://iiif.io/)
 - **Web Mapping Guides**:
-  - Leaflet: https://leafletjs.com/
-  - Mapbox GL JS: https://docs.mapbox.com/mapbox-gl-js/
+  - [Leaflet](https://leafletjs.com/)
+  - [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/)
 - The examples map in this workshop, on DavidRumsey.com: [https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~25145~990035:Golfe-Persique--Asie-79-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&mi=1&trs=2&qvq=q:*990035*;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~25145~990035:Golfe-Persique--Asie-79-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&mi=1&trs=2&qvq=q:*990035*;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1)
 - **The example map in this workshop, on Allmaps**: [https://editor.allmaps.org/results?url=https%3A%2F%2Fwww.davidrumsey.com%2Fluna%2Fservlet%2Fiiif%2Fm%2FRUMSEY%7E8%7E1%7E25145%7E990035%2Fmanifest&image=https%3A%2F%2Fwww.davidrumsey.com%2Fluna%2Fservlet%2Fiiif%2FRUMSEY%7E8%7E1%7E25145%7E990035](https://editor.allmaps.org/results?url=https%3A%2F%2Fwww.davidrumsey.com%2Fluna%2Fservlet%2Fiiif%2Fm%2FRUMSEY%7E8%7E1%7E25145%7E990035%2Fmanifest&image=https%3A%2F%2Fwww.davidrumsey.com%2Fluna%2Fservlet%2Fiiif%2FRUMSEY%7E8%7E1%7E25145%7E990035)
 
