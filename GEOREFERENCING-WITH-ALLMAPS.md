@@ -1,5 +1,7 @@
 # Workshop: Georeferencing Maps with Allmaps
 
+[goto.stanford.edu/paper2points](https://goto.stanford.edu/paper2points)
+
 ## A Guide to Converting Historical Maps into Digital Tiles
 
 ---

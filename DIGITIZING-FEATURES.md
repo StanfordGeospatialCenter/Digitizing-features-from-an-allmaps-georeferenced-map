@@ -1,5 +1,7 @@
 # **Workshop Tutorial: Digitizing French Ports and Railroads in ArcGIS Online (Individual User)**
 
+[goto.stanford.edu/paper2points](https://goto.stanford.edu/paper2points)
+
 ## **Introduction**
 
 This tutorial will guide you through creating an **ArcGIS Online** application for digitizing **ports** and **railroads** using a historical map of French ports and railroads. The goal is to convert key features from the map into geospatial data. This version is designed for individual users working independently.
