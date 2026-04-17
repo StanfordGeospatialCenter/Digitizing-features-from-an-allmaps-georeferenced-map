@@ -221,7 +221,6 @@ When you georeference a historical map, you unlock its data:
 * **Identifiable features**: Use intersections, building corners, bridges, or distinctive landmarks
 * **Modern verification**: You can cross-check your reference point on Google Maps or OpenStreetMap to ensure accuracy
 
-
 ## Important: Examine Maps Carefully for Non-Standard Coordinates
 
 ![](images/20260416_101634_image.png)
@@ -251,27 +250,31 @@ Many historical maps include a **graticule** (coordinate grid) printed on them. 
 
 1. **Access the GCP List**:
 
-   - On the right side of the editor, find the **"Ground Control Points"** or **"GCPs"** panel
+   - On the right side of the editor, find the **"Maps"** panel
    - This shows a list of all GCPs you've added
-2. **Reviewing Each GCP**:
+
+![](images/20260417_081443_image.png)
+
+1. **Reviewing Each GCP**:
 
    - Each GCP in the list shows:
+     - A numeric identifier for each GCP pair
      - Image coordinates (pixel location on the historical map)
      - Geographic coordinates (lat/lon on Earth)
-     - A preview or identifier for the feature
    - Click on any GCP in the list to highlight it on both maps
-3. **Identifying Errors**:
+2. **Identifying Errors**:
 
-   - Look for GCPs that seem misaligned
-   - If a GCP is highlighted far from the actual feature on the modern map, it's likely incorrect
-   - Watch for outliers: a GCP that's in a very different location than the others
-4. **Deleting Problematic GCPs**:
+   - Because there isn't currently a "riesidual error" measurement available in Allmaps, this is a visual inspection.
+   - Use the **Settings** Panel to inspect the georeferencing by increasing the opacity of the scanned map in the reference layer.
 
-   - Select a GCP from the list
-   - Click the "Delete" button (usually a trash icon or red X)
+![](images/20260417_081825_image.png)
+
+1. **Deleting Problematic GCPs**:
+
+   - Click the "Delete" button for any GCPs that seem problematic, using the Trash icon
    - Confirm the deletion
    - Observe how the map transformation updates (it should improve if the GCP was erroneous)
-5. **Fine-Tuning**:
+2. **Fine-Tuning**:
 
    - If the overall alignment is off in one area, add additional GCPs to that region
    - If you're unhappy with a GCP's precision, delete it and re-create it with more careful clicking
@@ -280,31 +283,7 @@ Many historical maps include a **graticule** (coordinate grid) printed on them. 
 
 ---
 
-### Step 7: Finalizing the Georeference
-
-**Objective**: Confirm your georeferencing is complete and export the results
-
-**Instructions:**
-
-1. **Review Final Alignment**:
-
-   - Turn on/off transparency or blending modes (if available) to compare the historical and modern maps
-   - Check multiple zoom levels
-   - Ensure no major geographic misalignments remain
-2. **Save Your Work**:
-
-   - In Allmaps Editor, save your GCP data
-   - If you're signed in, this saves to your Allmaps account
-   - If not, you may see an option to download or export your GCP data
-3. **What Gets Saved**:
-
-   - Allmaps stores your GCPs and transformation parameters, not the map image itself
-   - This is lightweight data that can be easily shared or backed up
-   - The original map image remains on David Rumsey's servers
-
----
-
-### Step 8: Exporting Tiles
+### Step 7: Exporting Tiles
 
 **Objective**: Generate XYZ tiles for use in web maps and other applications
 
@@ -312,27 +291,21 @@ Many historical maps include a **graticule** (coordinate grid) printed on them. 
 
 1. **Access the Exports Menu**:
 
-   - Look for an **"Exports"** or **"Export"** button/menu in the Allmaps Editor
-   - This may be in the top toolbar or in a right-side panel
-2. **Generate XYZ Tiles**:
+   - Look for the **"Export"** button in the Allmaps Editor at the top
+2. **Copy the Tile URL**:
 
-   - Select the option to generate XYZ tiles (also called "Web Mercator tiles" or "Slippy map tiles")
-   - Choose your desired zoom level range (default is often fine)
-   - Allmaps will process your georeferenced map and create a tile set
-3. **Accessing the Tile URL**:
-
-   - Once processing is complete, you'll see a **Tile URL** or **Tile Service URL**
+   - The **Tile URL** or **Tile Service URL** is immediately available.
    - This will look something like:
      ```
-     https://tiles.allmaps.org/[ID]/{z}/{x}/{y}.png
+     https://allmaps.xyz/images/be75a1837d5d6eba/{z}/{x}/{y}@2x.png
      ```
    - Copy this URL
-4. **Using the Tiles**:
+3. **Using the Tiles**:
 
    - This URL can now be used in web mapping libraries:
      - **Leaflet**: Use in `L.tileLayer()`
-     - **Mapbox GL**: Add as a raster layer source
-     - **Google Maps**: Use as an overlay
+     - **QGIS**: Add as an XYZ Tile Layer
+     - **ArcGIS Online**: Use the Add from URL Option
    - Example for Leaflet:
      ```javascript
      L.tileLayer('https://tiles.allmaps.org/[ID]/{z}/{x}/{y}.png').addTo(map);
@@ -355,17 +328,13 @@ Many historical maps include a **graticule** (coordinate grid) printed on them. 
 
 - **Solution**: You likely have an outlier GCP. Review the GCP list, identify misplaced points, delete them, and re-add with more precision.
 
-**Issue**: *Can't find the IIIF manifest link on David Rumsey*
-
-- **Solution**: Not all maps in David Rumsey have IIIF support. Try a different map, or verify that the map record shows IIIF availability.
-
 **Issue**: *Modern reference map doesn't show the area I'm looking for*
 
 - **Solution**: Zoom out on the reference map, or if the map is of an extremely old or historical boundary, the modern map may not show those features. Use historical map layers in the reference (OpenStreetMap sometimes has historical map data).
 
-**Issue**: *Tile export is taking a long time*
+**Issue**: *Tiles aren't  updated at the XYZ Tile Layer*
 
-- **Solution**: Allmaps tile generation can take a few minutes depending on zoom levels and map size. Be patient. If it fails, try a smaller zoom range.
+* Solution: Wait a bit, and try refreshing the view (Shift+Refresh, in a browser). Caching sometimes interferes with recieving the new tiles.
 
 ### Best Practices
 
@@ -384,7 +353,7 @@ Once you've mastered georeferencing a single map, consider:
 - **Georeference multiple sheets** of a map series and combine them
 - **Create a map collection** using Allmaps Collections feature to group related maps
 - **Build a web application** using Allmaps' web components or APIs to create interactive historical map experiences
-- **Contribute to OpenStreetMap** or other open data projects using your georeferenced maps
+- **Contribute to OpenStreetMap, OpenHistoricalMap** or other open data projects using your georeferenced maps
 
 ---
 
