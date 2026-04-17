@@ -1,208 +1,42 @@
-# From Paper Maps to Digital Data: A Complete Workshop Series
+# **Workshop Tutorial: Digitizing French Ports and Railroads in ArcGIS Online (Individual User)**
 
-## Introduction
+## **Introduction**
 
-This repository contains a comprehensive **two-part workshop series** that teaches you how to unlock spatial data hidden in historical scanned maps. Whether you're a researcher, librarian, cartographer, or GIS enthusiast, these workshops will guide you through the complete workflow: from finding a historical map online, to georeferencing it, to extracting and digitizing real-world features from it.
+This tutorial will guide you through creating an **ArcGIS Online** application for digitizing **ports** and **railroads** using a historical map of French ports and railroads. The goal is to convert key features from the map into geospatial data. This version is designed for individual users working independently.
 
----
+### **About the XYZ Tiles**
 
-## The Challenge: Paper Maps Hold Valuable Spatial Data
+The map used for this digitization task is accessible as an **XYZ tile layer** via a **IIIF manifest**. This setup enables viewing and digitizing the historical map within ArcGIS Online.
 
-Millions of historical maps exist in digital form, stored in institutions like the Library of Congress, David Rumsey Map Collection, and Wikimedia Commons. These maps contain invaluable information about how places looked in the past—where ports operated, which railways connected cities, how urban boundaries evolved, and more.
+#### **What are XYZ Tiles?**
 
-The problem? **Most of this spatial data remains trapped in static images.** You can view a scanned historical map online, but you can't easily extract its features or overlay it with modern data. This workshop series solves that problem by teaching you a practical, efficient workflow.
+**XYZ tiles** are a web standard for displaying maps on the internet. Instead of sending one giant image, maps are divided into small square tiles (typically 256×256 pixels) organized in a grid. Each tile is identified by three coordinates:
 
----
+- **X** = horizontal position (column)
+- **Y** = vertical position (row)
+- **Z** = zoom level (how far in or out you are viewing)
 
-## How These Two Workshops Work Together
+For example, at zoom level 1, there are only 4 tiles (2×2 grid). At zoom level 10, there are over 1 million tiles! Your browser only loads the tiles you can see, making maps fast and responsive. This is why Google Maps, OpenStreetMap, and most web maps use this format.
 
-### Part 1: Georeferencing with Allmaps
-### Part 2: Digitizing Features in ArcGIS Online
+#### **What is a IIIF Manifest?**
 
-Together, these workshops show you how to **release spatial data from historical maps in a sustainable, collaborative way**.
+**IIIF** (International Image Interoperability Framework) is a standard that allows libraries, museums, and archives to share high-quality images online. A **IIIF manifest** is a structured file (in JSON format) that describes an image or collection of images, along with metadata. Tools like Allmaps.org can read this manifest and convert the historical map into XYZ tiles so you can use it in GIS applications.
 
-```
-Historical Map (scanned image)
-           ↓
-    [WORKSHOP 1: GEOREFERENCE]
-    Add ground control points
-           ↓
-    XYZ Tile Layer (georeferenced)
-           ↓
-    [WORKSHOP 2: DIGITIZE]
-    Extract features into structured data
-           ↓
-    GeoJSON file (spatial data)
-```
+#### **Relevant Links**
 
-### Why This Workflow?
+- **IIIF Manifest URL**:
+  `https://purl.stanford.edu/zc368qw3281/iiif/manifest`
+- **Viewer Link**:
+  [Stanford Digital Repository Viewer](https://purl.stanford.edu/zc368qw3281)
+  ![alt text](images/image.png)
+- **Allmaps Editor Link**:
+  [View and edit the map georeferencing](https://editor.allmaps.org/results?url=https%3A%2F%2Fpurl.stanford.edu%2Fzc368qw3281%2Fiiif%2Fmanifest&image=https%3A%2F%2Fstacks.stanford.edu%2Fimage%2Fiiif%2Fzc368qw3281%252Fzc368qw3281_00_0001) for the map we are working with).
+- **Allmaps Results Page**: `https://allmaps.xyz/maps/560151a07e32b2e1/{z}/{x}/{y}.png`
 
-1. **No Derivative Files**: Unlike traditional GIS workflows that require downloading and storing large georeferenced image files, this approach stores only lightweight georeferencing metadata on Allmaps. The original map stays on its host institution's servers.
+![alt text](images/screenshot_2025-02-08_at_12_30_18_PM.png)
+---------------------------------------------------------------------
 
-2. **Instant Web Access**: Allmaps converts your historical map into web-standard XYZ tiles that work in any web mapping application (Google Maps, ArcGIS Online, Leaflet, Mapbox, etc.).
-
-3. **Collaborative and Shareable**: Your georeferencing work (ground control points) can be shared and improved by others. Your digitized data (GeoJSON) is a standard format that works with any GIS software.
-
-4. **Scalable**: Once you master this workflow on one map, you can apply it to dozens or hundreds of maps from different institutions and time periods.
-
-5. **Open and Sustainable**: All tools used (Allmaps, ArcGIS Online, GeoJSON) are either free or based on open standards, ensuring your work remains accessible for years to come.
-
----
-
-## Workshop 1: Georeferencing with Allmaps
-
-**What You'll Learn:**
-- How to find historical maps in online repositories (David Rumsey Map Collection, etc.)
-- Understanding IIIF (International Image Interoperability Framework) and why it matters
-- Creating ground control points (GCPs) to align a historical map to modern geography
-- Handling non-standard coordinate systems and graticules
-- Exporting your georeferenced map as web-standard XYZ tiles
-
-**Time Required:** 45–90 minutes (depending on map complexity)
-
-**Key Takeaway:** You'll have a georeferenced historical map accessible as tiles that can be used in web mapping applications or overlaid with modern data.
-
-➡️ **[Read Workshop 1: Georeferencing with Allmaps](GEOREFERENCING-WITH-ALLMAPS.md)**
-
----
-
-## Workshop 2: Digitizing Features in ArcGIS Online
-
-**What You'll Learn:**
-- Creating feature layers (points and lines) in ArcGIS Online
-- Defining data schemas with fields and controlled vocabularies (domains)
-- Using the georeferenced historical map as a reference layer
-- Manually digitizing features (ports, railroads, etc.) into structured data
-- Configuring popups, symbology, and interactive editing apps
-- Exporting your digitized data as GeoJSON for use in other GIS software
-
-**Time Required:** 90–180 minutes (depending on the number of features)
-
-**Key Takeaway:** You'll have extracted spatial features from a historical map into a structured, standardized dataset (GeoJSON) that can be analyzed, shared, or integrated with other GIS data.
-
-➡️ **[Read Workshop 2: Digitizing Features in ArcGIS Online](DIGITIZING-FEATURES.md)**
-
----
-
-## The Big Picture: Releasing Spatial Data from Historical Maps
-
-Here's why this workflow matters for scholarship and data preservation:
-
-### Before This Workflow
-- A researcher discovers a valuable historical map of 1920s transportation infrastructure
-- They download a high-resolution scan (potentially gigabytes of data)
-- They manually georeference it in desktop GIS software (e.g., ArcGIS, QGIS)
-- They store and version-control a large georeferenced image file
-- They manually digitize features into a shapefile or geodatabase
-- The work is difficult to share, update, or collaborate on
-- If the original map is updated or corrected, the derivative files become inconsistent
-
-### With This Workflow
-- The researcher finds the same map in David Rumsey collection (no download needed)
-- They spend 1–2 hours in Allmaps adding ground control points
-- The georeferenced map is instantly available as web tiles (lightweight, shareable)
-- They spend 2–3 hours in ArcGIS Online digitizing features
-- The digitized data is exported as GeoJSON—a universal, lightweight format
-- The work is easy to share via GitHub, email, or collaborative platforms
-- Updates to the georeferencing only require adjusting the GCPs; digitized features can be re-aligned automatically
-- The spatial data is now interoperable with modern datasets
-
-### Real-World Impact
-Once you've digitized spatial data from a historical map, you can:
-
-- **Analyze Change Over Time**: Compare historical transportation networks with modern ones
-- **Build Interactive Web Maps**: Create historical map viewers for public audiences
-- **Preserve Regional Knowledge**: Document how boundaries, landmarks, and infrastructure evolved
-- **Support Research**: Enable scholars to extract data for academic analysis
-- **Feed Open Data Initiatives**: Contribute to OpenStreetMap and other collaborative mapping projects
-- **Enable Humanitarian Work**: Historical maps of disappeared places help with cultural heritage preservation
-
----
-
-
-## How to Use These Workshops
-
-### For Beginners
-Start with **Workshop 1** (Georeferencing) to understand how maps are georeferenced. Then follow **Workshop 2** to digitize features. Each step includes detailed screenshots and explanations of underlying concepts.
-
-### For Intermediate Users
-You may want to skip ahead if you already know how to georeference. However, Workshop 2 covers ArcGIS Online-specific techniques that may be new.
-
-### For Advanced Users
-Consider adapting these workflows:
-- Use QGIS instead of ArcGIS Online for digitizing
-- Automate feature extraction using computer vision or machine learning
-- Batch process multiple maps using Allmaps APIs
-- Build custom web applications using Allmaps' web components
-
----
-
-## Learning Outcomes
-
-By completing both workshops, you will be able to:
-
-1. ✅ Find and evaluate historical maps in online repositories
-2. ✅ Understand IIIF and how modern digital libraries work
-3. ✅ Georeference any historical map using ground control points
-4. ✅ Generate web-standard tiles from georeferenced maps
-5. ✅ Design spatial data schemas with controlled vocabularies
-6. ✅ Digitize features from maps into structured geospatial data
-7. ✅ Export and share spatial data in standard formats
-8. ✅ Build collaborative workflows for releasing spatial data
-
----
-
-## Tools & Resources
-
-### Free & Open Tools
-- **Allmaps**: https://allmaps.org/ (georeferencing)
-- **QGIS**: https://www.qgis.org/ (alternative digitization platform)
-- **GeoJSON.io**: https://geojson.io/ (view and edit GeoJSON)
-
-### Institutional Resources
-- **David Rumsey Map Collection**: https://www.davidrumsey.com/ (millions of maps)
-- **Library of Congress Maps**: https://www.loc.gov/maps/ (extensive US map collection)
-- **Wikimedia Commons Maps**: https://commons.wikimedia.org/wiki/Maps (global collection)
-
-### Freemium Tools (Requires Institutional Access)
-- **ArcGIS Online**: https://stanford.maps.arcgis.com/ (Stanford users)
-- **ESRI Instant Apps**: Create no-code web apps from your data
-
----
-
-## Contributing
-
-Have you used this workflow on your own maps? Found a better approach? Spotted an error in the instructions?
-
-We welcome contributions! Consider:
-- Sharing your digitized datasets
-- Reporting issues or suggesting improvements
-- Creating additional tutorials for specific map types
-- Translating workshops into other languages
-
----
-
-## Citation
-
-If you use this workshop series in your research or teaching, please cite it as:
-
-> [Author/Institution]. (2026). "From Paper Maps to Digital Data: A Workshop Series on Georeferencing and Digitizing Historical Maps." Retrieved from https://github.com/[repository]
-
----
-
-## License
-
-These workshop materials are shared under a [Creative Commons Attribution 4.0 License](LICENSE). You are free to use, adapt, and share them for educational and research purposes.
-
----
-
-## Questions or Feedback?
-
-Have questions about the workflow? Found a map you'd like to georeference but aren't sure how to start? 
-
-Open an issue on this repository or reach out to the workshop organizers. We're here to help!
-
-🗺️ **Happy mapping, and welcome to the world of historical geospatial data!**
+## **Step 1: Login to ArcGIS Online**
 
 1. Open a web browser and navigate to [Stanford's ArcGIS Online Org](https://stanford.maps.arcgis.com):  https://stanford.maps.arcgis.com
    ![alt text](images/screenshot_2025-02-08_at_12_36_23_PM.png)
