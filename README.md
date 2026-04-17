@@ -2,6 +2,8 @@
 
 You can access this workshop doc at: [goto.stanford.edu/paper2points](https://goto.stanford.edu/paper2points)
 
+[This repo as a webpage](https://stanfordgeospatialcenter.github.io/Digitizing-features-from-an-allmaps-georeferenced-map/)
+
 ## Introduction
 
 This repository contains a comprehensive **two-part workshop series** that teaches you how to unlock spatial data hidden in historical scanned maps. Whether you're a researcher, librarian, cartographer, or GIS enthusiast, these workshops will guide you through the complete workflow: from finding a historical map online, to georeferencing it, to extracting and digitizing real-world features from it.
